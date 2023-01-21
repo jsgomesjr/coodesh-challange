@@ -14,3 +14,4 @@
 <p><strong>5: </strong>Acesse o arquivo Kernel.php e modifique: $schedule->command('ImportProducts')->dailyAt('23:00'); para $schedule->command('ImportProducts')->everyMinute();</p>
 <p><strong>6: </strong>Execute o seguinte comando para executar o script CRON de importação da base de dados: "php artisan schedule:run".</p>
 <p><strong>7: </strong>Base de dados importada com sucesso. Hora de testar a REST api.</p>
+<p><strong>8: </strong>Caso ocorra algum erro, execute o seguinte comando e tente novamente: "php artisan config:cache".</p>
