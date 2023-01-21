@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('ImportProducts')->dailyAt('23:00');
+        $schedule->command('ImportProducts')->dailyAt('01:00'); // Definir cronograna de execução do CRON script.
     }
 
     /**

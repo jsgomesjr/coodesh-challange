@@ -20,15 +20,15 @@ class ProductController extends Controller
 
     public function apiDetails()
     {
-        try {
+        try { // Verificando conexão com a base de dados.
             DB::connection()->getPdo();
             $database_connection = 'success, API is working and connected to the database. 200';
         } catch (\Exception $e) {
             $database_connection = 'error, API is not connected to the database. 500';
         }
 
-        $last_executed = CronDetail::latest()->first();
-        return response()->json([
+        $last_executed = CronDetail::latest()->first(); // Acessando detalhes do último CRON realizado.
+        return response()->json([ // Resposta em JSON com os dados.
             'database_connection' => $database_connection,
             'last_executed' => @$last_executed->executed_at,
             'memory_usage' => @$last_executed->memory_usage,
@@ -46,6 +46,9 @@ class ProductController extends Controller
             $result["message_name"] = 'Processado com sucesso';
             $result["message_type"] = "success";
             $result["object"] = $products;
+
+            // ------------- A T E N Ç Ã O -------------
+            // View meia-boca feita com bootstrap para uma simples visualização de todos os produtos, permanecer comentado para retorno do JSON.
             // return view('screens.products.index', compact('products'));
         } catch (\Exception $e) {
             $result["message_name"] = $e;
@@ -55,6 +58,10 @@ class ProductController extends Controller
             return response()->json($result);
         }
     }
+
+    // ------------- A T E N Ç Ã O -------------
+
+    // Método feito para caso precise de um POST para cadastro na REST api.
 
     // public function store(Request $request)
     // {
@@ -84,6 +91,9 @@ class ProductController extends Controller
             $result["message_name"] = 'Processado com sucesso';
             $result["message_type"] = "success";
             $result["object"] = $product;
+
+            // ------------- A T E N Ç Ã O -------------
+            // View meia-boca feita com bootstrap para uma simples visualização dos produtos, permanecer comentado para retorno do JSON.
             // return view('screens.products.product', compact('product'));
         } catch (\Exception $e) {
             $result["message_name"] = $e;
