@@ -17,4 +17,4 @@
 <p><strong>8: </strong>Caso ocorra algum erro, execute o seguinte comando e tente novamente: "php artisan config:cache".</p>
 
 <h4>OBSERVAÇÕES:</h4>
-<p>Uma tabela chamada cron_details também será criada, nela você poderá encontrar detalhes do CRON script.</p>
+<p>Uma tabela chamada cron_details também será criada, nela você poderá encontrar detalhes de execuções do CRON script, até quando o mesmo falhar.</p>
