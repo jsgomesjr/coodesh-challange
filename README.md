@@ -4,7 +4,7 @@
 <h3>Instruções para instalação do projeto:</h3>
 <p><strong>1: </strong>Clone o projeto no seu computador.</p>
 <p><strong>2: </strong>Execute o comando "composer update".</p>
-<p><strong>3: </strong>Configure a conexão com seu banco de dados no arquivo .ENV.</p>
+<p><strong>3: </strong>Configure a conexão com seu banco de dados no arquivo .ENV (copiar o .env.example e renomear).</p>
 
 <h3>Instruções para testar os scrips desenvolvidos:</h3>
 <p><strong>1: </strong>Execute o comando "php artisan migrate:fresh" para criação/recriação da base dados (base criada através de migration do Laravel).</p>
